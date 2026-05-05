@@ -19,3 +19,14 @@ if current_movies.get(movie):
 else:
     print("Sorry we don't have that!")
 
+print()
+# Deleting an item in a Python Dict
+
+print("Practing Item Deletion:")
+to_be_deleted = input("Which movie should we delete? ")
+
+if current_movies.get(to_be_deleted):
+    del current_movies[to_be_deleted]
+else:
+    print("Sorry, we don't have that title in our DB!!")
+
