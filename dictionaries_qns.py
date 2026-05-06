@@ -41,6 +41,10 @@ print(f"{deleted_item}")
 # Q5. Loop over the dictionary using .items() and print each
 #     key and value in this format → "username: ismail"
 
+print()
+for key, value in user_profile.items():
+    print(f"{key}: {value}")
+
 # Q6. Create this nested dictionary:
 #     An "order" with keys: order_id, total, and a nested "customer"
 #     key containing name and email
