@@ -23,6 +23,21 @@ print(f"New user age: {user_profile["age"]}")
 # Q4. Add a new key "country" with your value
 #     Then delete the "is_active" key
 
+user_profile["country"] = "Singapore"
+print(f"{user_profile}")
+
+print()
+print(f"After Deleting with 'del'")
+del user_profile["is_active"]
+print(f"{user_profile}")
+
+
+# Second way to delete if you wanna return a value, but also can handle error better when provided with default return.
+print()
+print(f"After Deleting with 'pop'")
+deleted_item = user_profile.pop("machine", "Not available!")
+print(f"{deleted_item}")
+
 # Q5. Loop over the dictionary using .items() and print each
 #     key and value in this format → "username: ismail"
 
