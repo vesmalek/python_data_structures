@@ -11,7 +11,14 @@ user_profile = {
 
 # Q2. Access the email using .get() with a fallback of "No email provided"
 
+print()
+email = user_profile.get("email", "No email provided")
+print(f"{email}")
+
 # Q3. The user just changed their age — update it
+
+user_profile["age"] = 21
+print(f"New user age: {user_profile["age"]}")
 
 # Q4. Add a new key "country" with your value
 #     Then delete the "is_active" key
