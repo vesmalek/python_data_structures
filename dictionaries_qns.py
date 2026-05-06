@@ -49,3 +49,15 @@ for key, value in user_profile.items():
 #     An "order" with keys: order_id, total, and a nested "customer"
 #     key containing name and email
 #     Then access the customer's email by chaining keys
+
+user_profile["order"] = {
+    "order_id": "276HGS4",
+    "total": 299.15,
+    "customer": {
+        "name": "Imran",
+        "email": "imran@beachvilla.com"
+    }
+}
+
+print()
+print(f"Customer email: {user_profile["order"]["customer"]["email"]}")
