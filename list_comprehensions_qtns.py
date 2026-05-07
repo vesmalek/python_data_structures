@@ -33,6 +33,12 @@ print(products_in_stock)
 #     Strip whitespace, lowercase everything, and remove duplicates
 #     Hint: you'll need a list comprehension + one thing from a previous topic
 
+raw_tags = ["  Python  ", "DJANGO", " api ", "REST", "django"]
+
+normalized = set([tag.strip().lower() for tag in raw_tags])
+print()
+print(normalized)
+
 # Q4. Given a list of user dicts, build a new list of strings in this format:
 #     "ismail — ismail@mail.com"
 #     users = [
