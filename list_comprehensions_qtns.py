@@ -3,7 +3,7 @@
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-even_numbers = [number for number in numbers if (number%2)==0]
+even_numbers = [number for number in numbers if number%2 == 0]
 print()
 print(even_numbers)
 
@@ -53,7 +53,7 @@ users = [
     {"username": "fatuma", "email": "fatuma@mail.com"},
 ]
 
-users_formatted = [(user["username"] + " - " + user["email"]) for user in users]
+users_formatted = [f'{user["username"]} - {user["email"]}' for user in users]
 print()
 print(users_formatted)
 
