@@ -18,11 +18,11 @@ print(even_numbers)
 
 
 products = [
-        {"name": "shirt", "price": 29.99, "in_stock": True},
-        {"name": "shoes", "price": 59.99, "in_stock": False},
-        {"name": "hat", "price": 14.99, "in_stock": True},
-        {"name": "belt", "price": 9.99, "in_stock": False},
-    ]
+    {"name": "shirt", "price": 29.99, "in_stock": True},
+    {"name": "shoes", "price": 59.99, "in_stock": False},
+    {"name": "hat", "price": 14.99, "in_stock": True},
+    {"name": "belt", "price": 9.99, "in_stock": False},
+]
 
 products_in_stock = [product["name"] for product in products if product["in_stock"]]
 print()
@@ -46,3 +46,16 @@ print(normalized)
 #         {"username": "ali", "email": "ali@mail.com"},
 #         {"username": "fatuma", "email": "fatuma@mail.com"},
 #     ]
+
+users = [
+    {"username": "ismail", "email": "ismail@mail.com"},
+    {"username": "ali", "email": "ali@mail.com"},
+    {"username": "fatuma", "email": "fatuma@mail.com"},
+]
+
+users_formatted = [(user["username"] + " - " + user["email"]) for user in users]
+print()
+print(users_formatted)
+
+
+
