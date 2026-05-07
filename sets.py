@@ -65,7 +65,7 @@ print(f"After adding 'publish': {user_permissions}")
 user_permissions.discard("execute")
 print(f"Removed 'execute': {user_permissions}")
 
-# Removing with pop - this returns error if key not available
+# Removing with remove - this returns error if key not available
 
 user_permissions.remove("read")
 print()
