@@ -16,3 +16,8 @@ print(discounted2)
 discounted3 = [price * 0.5 for price in prices]
 print()
 print(discounted3)
+
+emails = ['JOHNDOE@EXAMPLE.CO,', 'STAFF@APPLE.COM']
+emails_clean = list(map(str.lower, emails))
+print()
+print(emails_clean)
