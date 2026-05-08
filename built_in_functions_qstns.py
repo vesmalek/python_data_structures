@@ -19,13 +19,7 @@ for index, item in enumerate(menu, start=1):
 usernames = ["ismail", "ali", "fatuma"]
 emails = ["ismail@mail.com", "ali@mail.com", "fatuma@mail.com"]
 
-user_profiles = []
-
-for username, email in dict(zip(usernames, emails)).items():
-    user_profile = {}
-    user_profile["username"] = username
-    user_profile["email"] = email
-    user_profiles.append(user_profile)
+user_profiles = [{"username": u, "email": e} for u, e in zip(usernames, emails)]
 
 print()
 print("Question 02:")
