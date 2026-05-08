@@ -1,4 +1,4 @@
-# Enumerate method in Python
+# Enumerate function in Python
 
 colors = ['red', 'blue', 'green', 'purple']
 
