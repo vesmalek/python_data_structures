@@ -34,6 +34,13 @@ print(user_profiles)
 # Q3. Use map to apply a 10% discount to all prices
 #     prices = [100, 250, 80, 500, 30]
 
+prices = [100, 250, 80, 500, 30]
+
+discounted = list(map(lambda price: price * 0.9, prices))
+print()
+print("Question 03:")
+print(discounted)
+
 # Q4. Use filter to get only users who are both active and verified
 #     users = [
 #         {"username": "ismail", "is_active": True, "is_verified": True},
