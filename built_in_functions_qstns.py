@@ -36,7 +36,10 @@ print(user_profiles)
 
 prices = [100, 250, 80, 500, 30]
 
-discounted = list(map(lambda price: price * 0.9, prices))
+def discount(price):
+    return price * 0.9
+
+discounted = list(map(discount, prices))
 print()
 print("Question 03:")
 print(discounted)
@@ -49,8 +52,33 @@ print(discounted)
 #         {"username": "john", "is_active": True, "is_verified": True},
 #     ]
 
+users = [
+    {"username": "ismail", "is_active": True, "is_verified": True},
+    {"username": "ali", "is_active": True, "is_verified": False},
+    {"username": "fatuma", "is_active": False, "is_verified": True},
+    {"username": "john", "is_active": True, "is_verified": True},
+]
+
+def check_user(user):
+    return user["is_active"] and user["is_verified"] 
+
+valid_users = list(filter(check_user, users))
+
+print()
+print("Question 04:")
+print(valid_users)
+
 # Q5. Combine everything:
 #     From the filtered users in Q4, use map to extract just the usernames
 #     Then use enumerate starting from 1 to print them like:
 #     "1. ismail"
 #     "2. john"
+
+def get_usernames(valid_user):
+    return valid_user["username"]
+valid_usernames_only = list(map(get_usernames, valid_users))
+
+print()
+print("Question 05:")
+for index, user in enumerate(valid_usernames_only, start=1):
+    print(f"{index}. {user}")
