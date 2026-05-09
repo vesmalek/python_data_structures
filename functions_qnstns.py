@@ -17,7 +17,6 @@ final_price = calculate_discount(100, 10)
 print()
 print(final_price)
 
-
 # Q3. Define a function called create_product that takes:
 #     name, price, and an optional category that defaults to "General"
 #     It should RETURN a dictionary with those three keys
