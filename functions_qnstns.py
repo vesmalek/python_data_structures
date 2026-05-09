@@ -10,6 +10,14 @@ greet_user("imran")
 #     a price and a discount percentage, and RETURNS the final price
 #     Test it: calculate_discount(100, 10) should return 90.0
 
+def calculate_discount(price, discount):
+    return price * (1 - (discount/100))
+
+final_price = calculate_discount(100, 10)
+print()
+print(final_price)
+
+
 # Q3. Define a function called create_product that takes:
 #     name, price, and an optional category that defaults to "General"
 #     It should RETURN a dictionary with those three keys
