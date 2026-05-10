@@ -33,6 +33,15 @@ print(build_profile(username="imran", email="imran@example.com", age=15, interes
 #
 #     Call create_order by unpacking order_data — no hardcoding arguments
 
+order_data = {"product": "shirt", "quantity": 3, "price": 29.99}
+
+def create_order(product, quantity, price):
+    return {"product": product, "quantity": quantity, "price": price}
+
+print()
+print("Question 03:")
+print(create_order(**order_data))
+
 # Q4. Define a function called register_user that takes:
 #     a required username, any number of roles via *args,
 #     and any extra info via **kwargs
