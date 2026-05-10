@@ -62,3 +62,10 @@ print(register_user("ismail", "admin", "editor", country="Tanzania", age=30))
 #     It should return a single dict with status first, then all kwargs merged in
 #     Expected output for build_response("success", user="ismail", token="abc123"):
 #     {'status': 'success', 'user': 'ismail', 'token': 'abc123'}
+
+def build_response(status, **kwargs):
+    return {'status': status, **kwargs}
+
+print()
+print("Question 05:")
+print(build_response("success", user="ismail", token="abc123"))
