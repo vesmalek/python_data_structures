@@ -7,7 +7,8 @@ def add_items(*args):
         print(item)
 
 print()
-add_items('Apple', 'Oranges', 'Dragon Fruit')
+print("Question 01:")
+add_items('Coconut', 'Sea Weed', 'Cassava')
 print()
 add_items('Apple', 'Oranges', 'Dragon Fruit', 'Pineapple', 'Kiwi')
 
@@ -15,6 +16,13 @@ add_items('Apple', 'Oranges', 'Dragon Fruit', 'Pineapple', 'Kiwi')
 # Q2. Define a function called build_profile that accepts **kwargs
 #     and returns a dictionary of everything passed in
 #     Call it with at least 4 keyword arguments and print the result
+
+def build_profile(**kwargs):
+    return kwargs
+
+print()
+print("Question 02:")
+print(build_profile(username="imran", email="imran@example.com", age=15, interest="Medicine"))
 
 # Q3. You have this function:
 #     def create_order(product, quantity, price):
