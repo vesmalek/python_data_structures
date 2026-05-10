@@ -40,6 +40,19 @@ print(create_product('Oranges', 5.88))
 #     Otherwise return {"success": True, "message": "Login successful"}
 #     Test it with valid and invalid inputs using keyword arguments
 
+def validate_login(email, password):
+    if not email or not password:
+        return {"success": False, "error": "All fields required"}
+    else:
+        return {"success": True, "message": "Login successful"}
+    
+print()
+print("Question 04:")
+print(f"{validate_login("john@doe.com", "2783ABX")}")
+print(f"{validate_login("john@doe.com", "")}")
+print(f"{validate_login("", "2783ABX")}")
+print(f"{validate_login("", "")}")
+
 # Q5. Define a function called summarize_order that takes:
 #     product_name, quantity, price_per_unit
 #     It should return a dict with:
