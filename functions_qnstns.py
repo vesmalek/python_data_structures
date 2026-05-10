@@ -60,3 +60,14 @@ print(f"{validate_login("", "")}")
 #       - a "total" key calculated inside the function
 #     Then call the function and print each key-value pair
 #     using a loop (you know how to do this from Phase 2)
+
+def summarize_order(product_name, quantity, price_per_unit):
+    return {"Product Name": product_name, "Quantity": quantity, "Price Per Unit": price_per_unit, "Total": quantity * price_per_unit}
+
+print()
+print("Question 05:")
+
+order = summarize_order("Apples", 22, 2.5)
+
+for key, value in order.items():
+    print(f"{key} - {value}")
