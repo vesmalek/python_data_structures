@@ -49,6 +49,14 @@ print(create_order(**order_data))
 #     Expected output for register_user("ismail", "admin", "editor", country="Tanzania", age=30):
 #     {'username': 'ismail', 'roles': ['admin', 'editor'], 'country': 'Tanzania', 'age': 30}
 
+def register_user(username, *args, **kwargs):
+    return {'username': username, 'roles': [*args], **kwargs}
+
+print()
+print("Question 04:")
+print(register_user("ismail", "admin", "editor", country="Tanzania", age=30))
+
+
 # Q5. Define a function called build_response that takes a status string
 #     and **kwargs for any additional data
 #     It should return a single dict with status first, then all kwargs merged in
