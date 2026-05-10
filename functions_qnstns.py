@@ -4,6 +4,7 @@
 def greet_user(username):
     print(f"Welcome back, {username.strip().lower()}!")
 
+print("Question 01:")
 greet_user("imran")
 
 # Q2. Define a function called calculate_discount that takes
@@ -15,12 +16,23 @@ def calculate_discount(price, discount):
 
 final_price = calculate_discount(100, 10)
 print()
+print("Question 02:")
 print(final_price)
 
 # Q3. Define a function called create_product that takes:
 #     name, price, and an optional category that defaults to "General"
 #     It should RETURN a dictionary with those three keys
 #     Call it twice — once with category, once without
+
+def create_product(name, price, category="General"):
+    return dict(name=name, price=price, category=category)
+
+print()
+print("Question 03:")
+print(create_product('Tomato', 12.99, "Groceries"))
+
+print(create_product('Oranges', 5.88))
+
 
 # Q4. Define a function called validate_login that takes
 #     email and password
