@@ -17,6 +17,15 @@ display_shop()
 #     After calling the function, try to print tax_rate outside it
 #     and observe what happens — put the error in a comment
 
+def calculate_tax(price):
+    tax_rate = 0.16
+    return price * tax_rate
+
+print()
+print("Question 02:")
+tax_amount = calculate_tax(50000)
+print(f"Tax: ${tax_amount}")
+
 # Q3. Create a global variable called visitor_count = 0
 #     Define a function called track_visit that increments it by 1
 #     using the global keyword
