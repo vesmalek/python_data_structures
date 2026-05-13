@@ -37,6 +37,35 @@ print(f"Tax: ${tax_amount}")
 #     Then rewrite the same logic WITHOUT using global —
 #     pass the count in as a parameter and return the updated value
 
+# Solution 01:
+visitor_count = 0
+
+def track_visit():
+    global visitor_count
+    visitor_count += 1
+
+track_visit()
+track_visit()
+track_visit()
+print()
+print(f"Question 3, first alternative:")
+print(f"Visitor Count: {visitor_count}")
+
+# Alternative B:
+
+visitor_count = 0
+
+def track_visit2(count):
+    return count + 1
+
+track1 = track_visit2(0)
+track2 = track_visit2(track1)
+track3 = track_visit2(track2)
+print()
+print(f"Question 3, second alternative:")
+print(f"Visitor Count: {track3}")
+
+
 # Q4. Demonstrate the LEGB rule in one block of code:
 #     - Create a global variable x = "global"
 #     - Define an outer function with its own x = "enclosing"
