@@ -101,3 +101,18 @@ print(x)
 #         return total
 #
 #     print(apply_discount(50))
+
+
+# Explanation: The bug is the result of trying to access the value of 'total' in the expression 'total - discount' while total is not yet defined. Therefore, we need to add a line before the expression 'global total' which means anytime in this function I refer to a total I mean the global total
+
+# Solution (The Fix):
+total = 500
+
+def apply_discount(discount):
+    global total
+    total = total - discount
+    return total
+
+print()
+print("Question 05:")
+print(apply_discount(50))
