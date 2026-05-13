@@ -76,6 +76,21 @@ print(f"Visitor Count: {track3}")
 #       enclosing
 #       global
 
+x = "global"
+
+def outer_function():
+    def inner_function():
+        x = "local"
+        print(x)
+    x = "enclosing"
+    inner_function()
+    print(x)
+
+print()
+print("Question 04:")
+outer_function()
+print(x)
+
 # Q5. The function below has a bug — find it, explain it in a comment,
 #     and fix it:
 #
