@@ -28,7 +28,7 @@ print(f"Tax: ${tax_amount}")
 
 # print(f"Tax rate: {tax_rate}") 
 
-# The compiler throws NameError: name 'tax_rate' is not defined because tax_rate's scope is local, only available in the function where it is defined
+# The interpreter throws NameError: name 'tax_rate' is not defined because tax_rate's scope is local, only available in the function where it is defined
 
 # Q3. Create a global variable called visitor_count = 0
 #     Define a function called track_visit that increments it by 1
@@ -58,12 +58,13 @@ visitor_count = 0
 def track_visit2(count):
     return count + 1
 
-track1 = track_visit2(0)
-track2 = track_visit2(track1)
-track3 = track_visit2(track2)
+count = 0
+count = track_visit2(count)
+count = track_visit2(count)
+count = track_visit2(count)
 print()
 print(f"Question 3, second alternative:")
-print(f"Visitor Count: {track3}")
+print(f"Visitor Count: {count}")
 
 
 # Q4. Demonstrate the LEGB rule in one block of code:
@@ -116,3 +117,12 @@ def apply_discount(discount):
 print()
 print("Question 05:")
 print(apply_discount(50))
+
+# Cleaner version: Avoid using global, instead pass it as a parameter
+def apply_discount2(total, discount):
+    total = total - discount
+    return total
+
+print()
+print("Question 05 - cleaner version:")
+print(apply_discount2(500, 50))
