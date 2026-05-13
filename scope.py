@@ -26,6 +26,10 @@ print("Question 02:")
 tax_amount = calculate_tax(50000)
 print(f"Tax: ${tax_amount}")
 
+# print(f"Tax rate: {tax_rate}") 
+
+# The compiler throws NameError: name 'tax_rate' is not defined because tax_rate's scope is local, only available in the function where it is defined
+
 # Q3. Create a global variable called visitor_count = 0
 #     Define a function called track_visit that increments it by 1
 #     using the global keyword
